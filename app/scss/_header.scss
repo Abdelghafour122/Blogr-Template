@@ -1,0 +1,129 @@
+header {
+  padding: 60px 0;
+  background-image: url(../images/bg-pattern-intro-desktop.svg);
+  position: relative;
+  background-position: 30.4% 53%;
+  background-size: 271%;
+  overflow: hidden;
+  border-bottom-left-radius: 150px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+    z-index: -1;
+  }
+  & nav {
+    width: 100%;
+    & .left-side {
+      & .logo {
+        margin-right: 67px;
+        cursor: pointer;
+      }
+      & .nav-ul {
+        & li:not(:first-of-type) {
+          margin-right: 32px;
+          color: #ffddd8;
+          font-family: "Ubuntu";
+          font-size: $reg-fs;
+          transition: 0.3s;
+          position: relative;
+          cursor: pointer;
+          &:hover {
+            color: $white-text;
+          }
+          &:hover::after {
+            width: 82%;
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 0%;
+            left: 0;
+            top: 97%;
+            background-color: #fff;
+            transition: 0.3s;
+          }
+          & .pop {
+            position: absolute;
+            top: calc(100% + 28px);
+            left: -30%;
+            padding: 36px 26px;
+            background-color: $white-text;
+            border-radius: 7px;
+            transition: 0.3s;
+            box-shadow: 0px 18px 77px -30px black;
+            width: 170px;
+            & a {
+              width: fit-content;
+              color: #6d7981;
+              font-size: $reg-fs;
+              font-weight: 500;
+              &:hover {
+                color: $very-dark-black-blue-fb;
+              }
+            }
+            & a:not(:last-child) {
+              margin-bottom: 24px;
+            }
+          }
+        }
+      }
+    }
+    & .right-side {
+      & a:first-of-type {
+        margin-right: 33px;
+        color: $white-text;
+        font-family: "Ubuntu";
+      }
+
+      & a:last-of-type {
+        transition: 0.3s;
+        &:hover {
+          background-color: $very-light-red-cta-hovback;
+          color: $white-text;
+        }
+      }
+    }
+  }
+  & .sub-nav {
+    margin-top: 155px;
+    margin-bottom: 154px;
+    text-align: center;
+    & h1 {
+      margin: 0;
+      color: $white-text;
+      font-size: 60px;
+    }
+    & p {
+      font-size: 21px;
+      color: $white-text;
+      margin-top: 35px;
+      margin-bottom: 65px;
+    }
+    & .buttons {
+      & a:first-of-type {
+        margin-right: 18px;
+        transition: 0.3s;
+        &:hover {
+          background-color: $very-light-red-cta-hovback;
+          color: $white-text;
+        }
+      }
+      & a:last-of-type {
+        color: $white-text;
+        background-color: transparent;
+        border: 1px solid $white-text;
+        transition: 0.3s;
+        &:hover {
+          background-color: $white-text;
+          color: $light-red-cta;
+        }
+      }
+    }
+  }
+}
