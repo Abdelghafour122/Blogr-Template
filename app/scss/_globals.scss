@@ -33,6 +33,9 @@ a {
   &.jc-sa {
     justify-content: space-around;
   }
+  &.jc-fs {
+    justify-content: flex-start;
+  }
   &.ai-c {
     align-items: center;
   }
@@ -44,17 +47,18 @@ a {
 .container {
   // 750px
   @include breakpoint-down(small) {
-    width: 46.875rem;
+    max-width: 46.875rem;
     margin: 0 auto;
+    padding: 0 24px;
   }
   // 970px
   @include breakpoint-up(medium) {
-    width: 59.375rem;
+    max-width: 59.375rem;
     margin: 0 auto;
   }
   // 1120px
   @include breakpoint-up(large) {
-    width: 73.125rem;
+    max-width: 73.125rem;
     margin: 0 auto;
   }
 }
