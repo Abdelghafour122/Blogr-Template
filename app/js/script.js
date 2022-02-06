@@ -18,6 +18,7 @@ lis.forEach((li) => {
 let openSvg =
   "http://127.0.0.1:5500/blogr-landingpage/images/icon-hamburger.svg";
 let closeSvg = "http://127.0.0.1:5500/blogr-landingpage/images/icon-close.svg";
+
 burgerMenu.addEventListener("click", () => {
   let inImg = burgerMenu.querySelector("img");
   if (inImg.src == openSvg) {
