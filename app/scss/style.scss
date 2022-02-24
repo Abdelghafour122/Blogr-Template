@@ -1,6 +1,11 @@
 // IMPORT EVERYTHING HERE
-@import "../../../blogr-landingpage/app/scss/variables";
-@import "../../../blogr-landingpage/app/scss/animations";
-@import "../../../blogr-landingpage/app/scss/mixins";
-@import "../../../blogr-landingpage/app/scss/header";
-@import "../../../blogr-landingpage/app/scss/globals";
+@import "variables";
+@import "animations";
+@import "mixins";
+@import "header";
+@import "future";
+@import "art";
+@import "features";
+@import "footer";
+@import "att";
+@import "globals";

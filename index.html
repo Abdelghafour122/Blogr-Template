@@ -14,33 +14,34 @@
     <title>Frontend Mentor | [Blogr]</title>
   </head>
   <body>
+    <!-- THE HEADER -->
     <header>
       <div class="container df jc-c ai-c fd-c">
         <nav class="df jc-sb ai-c">
           <div class="logo">
             <a href="#"><img src="./images/logo.svg" alt="logo" /></a>
           </div>
-          <div class="links df jc-sb ai-c hide-in-mobile">
+          <div class="links df jc-sb ai-c hide-in-mobile fade-in">
             <ul class="nav-ul df ai-c jc-c">
-              <li class="glob">
-                Product
-                <div class="pop df fd-c has-fade fade-out">
+              <li class="glob df fd-c ai-c">
+                <span><a class="rev" href="#">Product</a></span>
+                <div class="pop df fd-c ai-c has-fade fade-in">
                   <a href="#">Contact</a>
                   <a href="#">Newsletter</a>
                   <a href="#">LinkedIn</a>
                 </div>
               </li>
-              <li class="glob">
-                Company
-                <div class="pop df fd-c has-fade fade-out">
+              <li class="glob df fd-c ai-c">
+                <span><a href="#">Company</a></span>
+                <div class="pop df fd-c ai-c has-fade fade-in">
                   <a href="#">Contact</a>
                   <a href="#">Newsletter</a>
                   <a href="#">LinkedIn</a>
                 </div>
               </li>
-              <li class="glob">
-                Connect
-                <div class="pop df fd-c has-fade fade-out">
+              <li class="glob df fd-c ai-c">
+                <span><a href="#">Connect</a></span>
+                <div class="pop df fd-c ai-c has-fade fade-in">
                   <a href="#">Contact</a>
                   <a href="#">Newsletter</a>
                   <a href="#">LinkedIn</a>
@@ -69,38 +70,111 @@
         </div>
       </div>
     </header>
-    <!-- Product Overview Pricing Marketplace Features Integrations Company About
-    Team Blog Careers Connect Contact Newsletter LinkedIn Login Sign Up A modern
-    publishing platform Grow your audience and build your online brand Start for
-    Free Learn More Designed for the future Introducing an extensible editor
-    Blogr features an exceedingly intuitive interface which lets you focus on
-    one thing: creating content. The editor supports management of multiple
-    blogs and allows easy manipulation of embeds such as images, videos, and
-    Markdown. Extensibility with plugins and themes provide easy ways to add
-    functionality or change the looks of a blog. Robust content management
-    Flexible content management enables users to easily move through posts.
-    Increase the usability of your blog by adding customized categories,
-    sections, format, or flow. With this functionality, you’re in full control.
-    State of the Art Infrastructure With reliability and speed in mind,
-    worldwide data centers provide the backbone for ultra-fast connectivity.
-    This ensures your site will load instantly, no matter where your readers
-    are, keeping your site competitive. Free, open, simple Blogr is a free and
-    open source application backed by a large community of helpful developers.
-    It supports features such as code syntax highlighting, RSS feeds, social
-    media integration, third-party commenting tools, and works seamlessly with
-    Google Analytics. The architecture is clean and is relatively easy to learn.
-    Powerful tooling Batteries included. We built a simple and straightforward
-    CLI tool that makes customization and deployment a breeze, but capable of
-    producing even the most complicated sites. Product Overview Pricing
-    Marketplace Features Integrations Company About Team Blog Careers Connect
-    Contact Newsletter LinkedIn
-
+    <!-- FUTURE SECTION -->
+    <div class="future">
+      <div class="container df fd-c ai-c">
+        <h1 class="title">Designed for the future</h1>
+        <div class="inner container df ai-c">
+          <div class="text">
+            <h2>Introducing an extensible editor</h2>
+            <p>
+              Blogr features an exceedingly intuitive interface which lets you
+              focus on one thing: creating content. The editor supports
+              management of multiple blogs and allows easy manipulation of
+              embeds such as images, videos, and Markdown. Extensibility with
+              plugins and themes provide easy ways to add functionality or
+              change the looks of a blog.
+            </p>
+            <h2>Robust content management</h2>
+            <p>
+              Flexible content management enables users to easily move through
+              posts. Increase the usability of your blog by adding customized
+              categories, sections, format, or flow. With this functionality,
+              you’re in full control.
+            </p>
+          </div>
+          <div class="image hide-in-desktop"></div>
+        </div>
+      </div>
+    </div>
+    <!-- ART SECTION -->
+    <div class="art">
+      <div class="container df jc-c ai-c">
+        <div class="image"></div>
+        <div class="text">
+          <h1>State of the Art Infrastructure</h1>
+          <p>
+            With reliability and speed in mind, worldwide data centers provide
+            the backbone for ultra-fast connectivity. This ensures your site
+            will load instantly, no matter where your readers are, keeping your
+            site competitive.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- FEATURES SECTION -->
+    <div class="features">
+      <div class="container df ai-c jc-fe">
+        <div class="image hide-in-desktop"></div>
+        <div class="text">
+          <h2>Free, open, simple</h2>
+          <p>
+            Blogr is a free and open source application backed by a large
+            community of helpful developers. It supports features such as code
+            syntax highlighting, RSS feeds, social media integration,
+            third-party commenting tools, and works seamlessly with Google
+            Analytics. The architecture is clean and is relatively easy to
+            learn.
+          </p>
+          <h2>Powerful tooling</h2>
+          <p>
+            Batteries included. We built a simple and straightforward CLI tool
+            that makes customization and deployment a breeze, but capable of
+            producing even the most complicated sites.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- THE FOOTER -->
+    <footer>
+      <div class="container">
+        <a href="#" class="logo"><img src="./images/logo.svg" alt="Blogr" /></a>
+        <div class="product">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Marketplace</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Integrations</a></li>
+          </ul>
+        </div>
+        <div class="company">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Team</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+        </div>
+        <div class="connect">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- ATTRIBUTION -->
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+      >. Coded with &#10084 by <a href="#">Abdelghafour122</a>.
+    </div>
     <script src="./app/js/script.js"></script>
   </body>
 </html>

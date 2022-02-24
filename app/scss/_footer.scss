@@ -1,0 +1,45 @@
+footer {
+  margin-top: 160px;
+  background-color: $very-dark-black-blue-fb;
+  border-top-right-radius: 110px;
+  padding: 70px 0;
+  color: $white-text;
+  font-family: "Ubuntu";
+  & .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    row-gap: 50px;
+    @include breakpoint-down(small) {
+      row-gap: unset;
+      text-align: center;
+    }
+    & .logo {
+      margin-bottom: 83px;
+    }
+    & h4 {
+      margin: 0 0 42px 0;
+      font-size: 18px;
+    }
+    & li {
+      & a {
+        color: $grayish-blue-ft;
+        font-weight: 300;
+      }
+      & a:hover {
+        color: $white-text;
+        border-bottom: 1px solid white;
+      }
+    }
+    & li:not(:last-of-type) {
+      margin: 0 0 22px 0;
+      @include breakpoint-down(small) {
+        margin: 0 0 16px 0;
+      }
+    }
+    & li:last-of-type {
+      @include breakpoint-down(small) {
+        margin-bottom: 56px;
+      }
+    }
+  }
+}

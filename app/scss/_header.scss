@@ -5,13 +5,13 @@ header {
   position: relative;
   background-position: 30.4% 53%;
   background-size: 271%;
-  overflow: hidden;
   border-bottom-left-radius: 150px;
   @include breakpoint-down(small) {
     background-image: url(../images/bg-pattern-intro-mobile.svg);
     background-repeat: no-repeat;
     background-position: 35% 26%;
     background-size: 373%;
+    border-bottom-left-radius: 150px;
   }
   &::before {
     content: "";
@@ -22,6 +22,7 @@ header {
     width: 100%;
     background-image: linear-gradient(to right, #ff8f70, #ff3d54);
     z-index: -1;
+    border-bottom-left-radius: 150px;
   }
   & nav {
     width: 100%;
@@ -37,7 +38,7 @@ header {
     & .links {
       flex-grow: 1;
       @include breakpoint-down(small) {
-        display: flex;
+        display: none;
         flex-direction: column;
         position: absolute;
         top: calc(100% + 40px);
@@ -48,6 +49,7 @@ header {
         background-color: #fff;
         border-radius: 5px;
         width: 324px;
+        box-shadow: 0px 18px 77px -30px black;
       }
       & .nav-ul {
         @include breakpoint-down(small) {
@@ -61,12 +63,8 @@ header {
             color: $very-dark-black-blue-fb;
           }
           margin-right: 32px;
-          color: #ffddd8;
           font-family: "Ubuntu";
-          font-size: $reg-fs;
-          transition: 0.3s;
           position: relative;
-          cursor: pointer;
           &:hover {
             color: $white-text;
             @include breakpoint-down(small) {
@@ -75,28 +73,53 @@ header {
               }
             }
           }
-          &::before {
-            content: "";
-            background-image: url(../images/icon-arrow-light.svg);
-            position: absolute;
-            top: 50%;
-            transform: translateY(-25%);
-            left: 107%;
-            height: 10px;
-            width: 10px;
-            background-repeat: no-repeat;
-            transition: 0.3s;
-            @include breakpoint-down(small) {
-              background-image: url(../images/icon-arrow-dark.svg);
+          & span {
+            position: relative;
+            &::before {
+              content: "";
+              background-image: url(../images/icon-arrow-light.svg);
+              position: absolute;
+              top: 50%;
+              transform: translateY(-25%);
+              left: 107%;
+              height: 10px;
+              width: 10px;
+              background-repeat: no-repeat;
+              transition: 0.3s;
+              @include breakpoint-down(small) {
+                background-image: url(../images/icon-arrow-dark.svg);
+              }
+            }
+            &:hover::before {
+              transform: rotate(180deg) translateY(50%);
+              transform-origin: center center;
+            }
+
+            & a {
+              color: #ffddd8;
+              font-family: "Ubuntu";
+              font-size: $reg-fs;
+              transition: 0.3s;
+              &:hover {
+                color: $white-text;
+                @include breakpoint-down(small) {
+                  &:hover {
+                    color: $very-dark-grayish-blue-bc;
+                  }
+                }
+              }
+              @include breakpoint-down(small) {
+                color: $very-dark-black-blue-fb;
+              }
+              &:focus-within .pop {
+                display: flex;
+              }
             }
           }
-          &:hover::before {
-            transform: rotate(180deg) translateY(50%);
-            transform-origin: center center;
-          }
-
-          &:hover::after {
-            width: 100%;
+          @include breakpoint-up(large) {
+            &:hover::after {
+              width: 100%;
+            }
           }
           &::after {
             content: "";
@@ -109,18 +132,34 @@ header {
             transition: 0.3s;
           }
           & .pop {
+            position: absolute;
+            top: calc(100% + 20px);
+            left: -40%;
+            padding: 36px 26px;
+            background-color: $white-text;
+            border-radius: 7px;
+            transition: 0.3s;
+            box-shadow: 0px 18px 77px -30px black;
+            width: 170px;
+            display: none;
             @include breakpoint-up(large) {
-              position: absolute;
-              top: calc(100% + 28px);
-              left: -30%;
-              padding: 36px 26px;
-              background-color: $white-text;
-              border-radius: 7px;
-              transition: 0.3s;
-              box-shadow: 0px 18px 77px -30px black;
-              width: 170px;
+              align-items: flex-start;
+            }
+
+            @include breakpoint-down(small) {
+              position: unset;
+              box-shadow: unset;
+              margin-top: 26px;
+              background-color: #e4e4e4;
+              padding: 29px;
+              width: calc(324px - 48px);
+              border-radius: 5px;
+              color: $very-dark-grayish-blue-bc;
+              text-align: center;
             }
             & a {
+              display: block;
+              text-align: center;
               width: fit-content;
               color: #6d7981;
               font-size: $reg-fs;
@@ -133,6 +172,11 @@ header {
               margin-bottom: 24px;
             }
           }
+
+          // this one is the revealer
+          &:focus-within .pop {
+            display: inline-flex;
+          }
         }
       }
     }
@@ -141,13 +185,41 @@ header {
         margin-right: 33px;
         color: $white-text;
         font-family: "Ubuntu";
+        @include breakpoint-down(small) {
+          color: $very-dark-black-blue-fb;
+          margin: 36px 0 27px 0;
+          font-size: 18px;
+        }
       }
 
       & a:last-of-type {
         transition: 0.3s;
+        @include breakpoint-down(small) {
+          background-image: linear-gradient(
+            to right,
+            $very-light-red,
+            $light-red
+          );
+          color: $white-text;
+        }
         &:hover {
           background-color: $very-light-red-cta-hovback;
           color: $white-text;
+        }
+      }
+      @include breakpoint-down(small) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        & ::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -68px;
+          width: calc(324px - 48px);
+          height: 2px;
+          background-color: #e4e4e4;
         }
       }
     }
