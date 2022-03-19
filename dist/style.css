@@ -880,9 +880,10 @@ footer .container .logo {
   margin-bottom: 83px;
 }
 
-footer .container h4 {
+footer .container p {
   margin: 0 0 42px 0;
   font-size: 18px;
+  font-weight: 500;
 }
 
 footer .container li a {
