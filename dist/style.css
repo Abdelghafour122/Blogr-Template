@@ -124,6 +124,9 @@ header nav .logo {
   margin-right: 67px;
   cursor: pointer;
   text-align: center;
+}
+
+header nav .logo img {
   height: 40px;
   width: 101px;
 }
