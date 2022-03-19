@@ -16,8 +16,8 @@ footer {
     & .logo {
       margin-bottom: 83px;
       & img {
-        height: auto;
-        width: auto;
+        height: 40px;
+        width: 101px;
       }
       @include breakpoint-up(small) {
         margin-bottom: 0;

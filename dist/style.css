@@ -124,8 +124,8 @@ header nav .logo {
   margin-right: 67px;
   cursor: pointer;
   text-align: center;
-  height: auto;
-  width: auto;
+  height: 40px;
+  width: 101px;
 }
 
 header nav .links {
@@ -883,8 +883,8 @@ footer .container .logo {
 }
 
 footer .container .logo img {
-  height: auto;
-  width: auto;
+  height: 40px;
+  width: 101px;
 }
 
 @media (min-width: 47.9375rem) {
