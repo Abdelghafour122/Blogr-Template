@@ -918,6 +918,7 @@ footer .container li:not(:last-of-type) {
   color: #ffffff;
   font-size: 20px;
   font-weight: 400;
+  margin: 0;
 }
 
 .attribution a {
