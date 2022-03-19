@@ -15,6 +15,13 @@ footer {
     }
     & .logo {
       margin-bottom: 83px;
+      & img {
+        height: auto;
+        width: auto;
+      }
+      @include breakpoint-up(small) {
+        margin-bottom: 0;
+      }
     }
     & p {
       margin: 0 0 42px 0;
